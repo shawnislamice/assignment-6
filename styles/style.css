@@ -1,0 +1,17 @@
+.font-mulish {
+  font-family: "Mulish", sans-serif;
+}
+
+.font-inter{
+      font-family: "Inter", sans-serif;
+}
+img{
+  object-fit: cover;
+}
+.footer{
+  background: linear-gradient(180deg, rgba(18, 19, 45, 0.05) 0%, rgba(18, 19, 45, 0.00) 100%);
+  margin-top: 80px;
+}
+.hr{
+  background: rgba(48, 50, 94, 0.10);
+}

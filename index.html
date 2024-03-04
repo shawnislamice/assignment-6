@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 7</title>
+    <!-- Tailwind and Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind and Daisy UI -->
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Font Awesome CDN -->
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- CSS File -->
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font -->
+  </head>
+  <!-- Preloader -->
+  <div id="preloader" class="hidden flex justify-center items-center">
+    <img
+      class="relative h-screen top-1/2 bottom-1/2"
+      src="./images/preloader.gif"
+      alt=""
+    />
+  </div>
+  <!-- Preloader -->
+  <body class="font-mulish" id="body">
+    <header id="header">
+      <!-- Navbar starts here -->
+      <section
+        class="container mx-auto max-w-screen-xl flex md:flex-row flex-col gap-3 md;gap-0 justify-between items-center mt-7"
+      >
+        <h1 class="text-[#12132D] font-extrabold text-2xl md:text-4xl">
+          PreBon
+        </h1>
+        <div class="flex gap-3 items-center">
+          <div class="tooltip" data-tip="Home">
+            <button
+              class="btn rounded-full hover:bg-[#797DFC80] duration-300 border-none outline-none"
+            >
+              <img class="size-5" src="./images/home.png" alt="" />
+            </button>
+          </div>
+          <div class="tooltip" data-tip="Edit">
+            <button
+              class="hover:bg-[#797DFC80] duration-300 border-none outline-none btn rounded-full"
+            >
+              <img class="size-5" src="./images/pen.png" alt="" />
+            </button>
+          </div>
+          <div class="tooltip" data-tip="Add">
+            <button
+              class="hover:bg-[#797DFC80] duration-300 border-none outline-none btn rounded-full"
+            >
+              <img class="size-5" src="./images/user.png" alt="" />
+            </button>
+          </div>
+          <div class="tooltip" data-tip="Flag">
+            <button
+              class="hover:bg-[#797DFC80] duration-300 border-none outline-none btn rounded-full"
+            >
+              <img class="size-5" src="./images/flag.png" alt="" />
+            </button>
+          </div>
+
+          <button
+            class="px-6 py-2 font-bold text-white bg-[#797DFC] border-none outline-none rounded-3xl hover:scale-95 duration-300"
+          >
+            Sign In
+          </button>
+        </div>
+      </section>
+      <!-- Navbar ends here -->
+      <!-- Banner Section starts here -->
+      <section
+        class="container mx-auto max-w-screen-xl bg-[#12132D] rounded-3xl bg-[url('./images/bgbanner.png')] flex md:flex-row flex-col justify-around items-center md:h-[550px] my-6 md:mt-10 md:mb-20 bg-no-repeat bg-bottom bg-contain px-4 md:px-20 md:py-0 py-6"
+      >
+        <div class="md:w-1/2">
+          <h1
+            class="text-center md:text-start text-3xl md:text-6xl font-extrabold text-white md:leading-[86px]"
+          >
+            Welcome to the
+            <span
+              class="bg-gradient-to-r text-transparent from-[#797DFC] to-[#797dfc69] bg-clip-text"
+              >PreBon</span
+            >
+            Forum
+          </h1>
+          <p
+            class="text-center md:text-start py-3 md:py-5 font-medium opacity-80 text-white md:leading-9"
+          >
+            Join our community forum and participate in our contest! We want to
+            hear your thoughts and opinions on a variety of topics.
+          </p>
+          <div
+            class="relative flex md:flex-row flex-col md:gap-0 gap-4 items-center justify-center md:justify-start"
+          >
+            <input
+              type="text"
+              id="search-value"
+              class="input rounded-3xl md:w-[400px]"
+              placeholder="Search here anything"
+              required
+              for="search-btn"
+            />
+            <button
+              class="bg-[#797DFC] px-6 py-2 rounded-3xl text-white md:absolute md:right-44 hover:scale-95 duration-300"
+              id="search-btn"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-5 md:p-10 space-y-4 mt-5 md:mt-0">
+          <div class="flex items-center justify-between gap-10">
+            <p class="text-[#12132DCC] font-bold">Registered Users</p>
+            <span class="font-semibold">01</span>
+          </div>
+          <div class="flex items-center justify-between gap-10">
+            <p class="text-[#12132DCC] font-bold">Forum</p>
+            <span class="font-semibold">05</span>
+          </div>
+          <div class="flex items-center justify-between gap-10">
+            <p class="text-[#12132DCC] font-bold">Topics</p>
+            <span class="font-semibold">01</span>
+          </div>
+          <div class="flex items-center justify-between gap-10">
+            <p class="text-[#12132DCC] font-bold">Replies</p>
+            <span class="font-semibold">01</span>
+          </div>
+        </div>
+      </section>
+      <!-- Banner Section ends here -->
+    </header>
+
+    <main>
+      <!-- Preloader -->
+      <div id="preloader-2" class="hidden flex justify-center items-center">
+        <img
+          class="relative h-screen top-1/2 bottom-1/2"
+          src="./images/preloader.gif"
+          alt=""
+        />
+      </div>
+      <!-- Preloader -->
+      <!-- Card Container Post Starts here -->
+      <section class="container mx-auto max-w-screen-xl">
+        <div>
+          <h1 class="text-center text-3xl md:text-4xl font-extrabold">
+            Let’s Discuss
+          </h1>
+          <p class="text-center font-inter md:w-2/3 mx-auto mt-4 opacity-80">
+            With our integrated testing features, you can effortlessly run unit
+            tests and view the results directly within the app. Say goodbye to
+            cumbersome processes and hello to seamless testing!
+          </p>
+        </div>
+        <div class="my-12 flex md:flex-row flex-col justify-between gap-6">
+          <div id="posts-container" class="flex flex-col gap-4 md:w-[60%]">
+            <!-- Card -->
+            <!-- <div
+              class="bg-[#797DFC1A] border-2 border-[#797DFC] rounded-xl flex gap-3 md:p-10 px-2 py-3"
+            >
+              <div class="relative">
+                <img
+                  class="size-20 md:size-[72px] rounded-lg"
+                  src="./images/lets-discuss-profile.jpg"
+                  alt=""
+                />
+                <div
+                  class="bg-[#10B981] rounded-full size-5 absolute -top-2 -right-1"
+                ></div>
+              </div>
+              <div>
+                <div class="flex items-center gap-4">
+                  <p class="text-[#12132DCC] font-medium">
+                    # <span>Music</span>
+                  </p>
+                  <p class="text-[#12132DCC] font-medium">
+                    Author : <span>Awlad Hossain</span>
+                  </p>
+                </div>
+                <h1
+                  class="text-xl text-[#12132D] font-semibold md:font-bold py-2"
+                >
+                  10 Kids Unaware of Their Halloween Costume
+                </h1>
+                <p class="text-[#12132D99] font-inter text-justify">
+                  It’s one thing to subject yourself to ha Halloween costume
+                  mishap because, hey that’s your prerogative
+                </p>
+                <hr class="my-3 border-dashed border-[1px]" />
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-8 items-center">
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/message.png" alt="" />
+                      <p>560</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/eye.png" alt="" />
+                      <p>1,568</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/time.png" alt="" />
+                      <p>5 min</p>
+                    </div>
+                  </div>
+                  <div>
+                    <button><img src="./images/email 1.png" alt="" /></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#797DFC1A] border-2 border-[#797DFC] rounded-xl flex gap-3 md:p-10 px-2 py-3"
+            >
+              <div class="relative">
+                <img
+                  class="size-20 md:size-[72px] rounded-lg"
+                  src="./images/lets-discuss-profile.jpg"
+                  alt=""
+                />
+                <div
+                  class="bg-[#10B981] rounded-full size-5 absolute -top-2 -right-1"
+                ></div>
+              </div>
+              <div>
+                <div class="flex items-center gap-4">
+                  <p class="text-[#12132DCC] font-medium">
+                    # <span>Music</span>
+                  </p>
+                  <p class="text-[#12132DCC] font-medium">
+                    Author : <span>Awlad Hossain</span>
+                  </p>
+                </div>
+                <h1
+                  class="text-xl text-[#12132D] font-semibold md:font-bold py-2"
+                >
+                  10 Kids Unaware of Their Halloween Costume
+                </h1>
+                <p class="text-[#12132D99] font-inter text-justify">
+                  It’s one thing to subject yourself to ha Halloween costume
+                  mishap because, hey that’s your prerogative
+                </p>
+                <hr class="my-3 border-dashed border-[1px]" />
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-8 items-center">
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/message.png" alt="" />
+                      <p>560</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/eye.png" alt="" />
+                      <p>1,568</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/time.png" alt="" />
+                      <p>5 min</p>
+                    </div>
+                  </div>
+                  <div>
+                    <button><img src="./images/email 1.png" alt="" /></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#797DFC1A] border-2 border-[#797DFC] rounded-xl flex gap-3 md:p-10 px-2 py-3"
+            >
+              <div class="relative">
+                <img
+                  class="size-20 md:size-[72px] rounded-lg"
+                  src="./images/lets-discuss-profile.jpg"
+                  alt=""
+                />
+                <div
+                  class="bg-[#10B981] rounded-full size-5 absolute -top-2 -right-1"
+                ></div>
+              </div>
+              <div>
+                <div class="flex items-center gap-4">
+                  <p class="text-[#12132DCC] font-medium">
+                    # <span>Music</span>
+                  </p>
+                  <p class="text-[#12132DCC] font-medium">
+                    Author : <span>Awlad Hossain</span>
+                  </p>
+                </div>
+                <h1
+                  class="text-xl text-[#12132D] font-semibold md:font-bold py-2"
+                >
+                  10 Kids Unaware of Their Halloween Costume
+                </h1>
+                <p class="text-[#12132D99] font-inter text-justify">
+                  It’s one thing to subject yourself to ha Halloween costume
+                  mishap because, hey that’s your prerogative
+                </p>
+                <hr class="my-3 border-dashed border-[1px]" />
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-8 items-center">
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/message.png" alt="" />
+                      <p>560</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/eye.png" alt="" />
+                      <p>1,568</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <img class="size-5" src="./images/time.png" alt="" />
+                      <p>5 min</p>
+                    </div>
+                  </div>
+                  <div>
+                    <button><img src="./images/email 1.png" alt="" /></button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Card -->
+          </div>
+          <div class="bg-[#12132D0D] rounded-2xl p-5 md:w-[40%]">
+            <div class="flex justify-between items-center">
+              <p class="text-xl text-[#12132D] font-bold">Title</p>
+              <div class="flex items-center gap-3">
+                <img src="./images/greentick.png" alt="" />
+                <p class="text-[#12132D99] font-inter">
+                  Mark as read (<span id="mark-as-read-count">0</span>)
+                </p>
+              </div>
+            </div>
+            <div
+              class="mt-4 flex flex-col gap-4"
+              id="card-post-container"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Card Container Post ends here -->
+
+      <!-- Post Container banner starts here -->
+      <section
+        class="rounded-3xl container mx-auto max-w-screen-xl my-10 md:my-20 bg-[#12132D] md:h=[400px] flex md:px-32 py-10 justify-between items-center md:flex-row flex-col md:gap-0 gap-10"
+      >
+        <div>
+          <h1
+            class="text-white text-3xl md:text-start text-center md:text-4xl font-extrabold"
+          >
+            Join Our Forum
+          </h1>
+          <p
+            class="text-white opacity-80 md:pt-3 md:pb-6 md:w-3/4 text-center md:text-start md:px-0 px-2 py-4 md:py-0"
+          >
+            Share your favorite opinion and win and wp forum coffee mug! Yes,
+            you can run unit tests and view the results directly within the app.
+          </p>
+          <button
+            class="bg-[#797DFC] px-6 py-2 font-bold rounded-3xl text-white hover:scale-95 duration-300 md:inline block md:mx-start mx-auto"
+          >
+            Registered Now
+          </button>
+        </div>
+        <div>
+          <img
+            class="md:w-full w-1/2 md:inline block mx-auto"
+            src="./images/joinforum.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- Post Container banner ends here -->
+
+      <!-- Latest Post starts here -->
+      <section
+        class="container mx-auto max-w-screen-xl flex flex-col justify-center items-center"
+      >
+        <div>
+          <h1 class="text-center text-4xl font-extrabold">Latest Posts</h1>
+          <p class="text-center font-inter md:w-2/3 mx-auto mt-4 opacity-80">
+            Experience the convenience of integrated testing and take your
+            development process to the next level. Try it out today and witness
+            the difference!
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-6 md:my-7 my-4"
+          id="latest-post-container"
+        >
+          <!-- Card -->
+
+          <!-- Card -->
+        </div>
+      </section>
+      <!-- Latest Post ends here -->
+    </main>
+    <footer class="footer">
+      <section
+        class="container mx-auto max-w-screen-xl py-10 md:py-20 flex flex-col justify-center items-center"
+      >
+        <div class="">
+          <h1
+            class="text-center text-3xl md:text-4xl text-[#12132D] font-extrabold"
+          >
+            PreBon
+          </h1>
+          <p
+            class="text-center text-[#12132DB2] md:w-2/3 md:py-5 py-4 mx-auto px-2 md:px-0"
+          >
+            Thank you for visiting our site. Stay connected for updates and
+            promotions.Explore, Connect, Stay Informed.
+          </p>
+          <div>
+            <img
+              class="block mx-auto cursor-pointer"
+              src="./images/Social.png"
+              alt=""
+            />
+          </div>
+          <hr class="text-black my-6 border-[#30325E1A]" />
+          <p class="text-center">2024, All Rights Reserved.</p>
+        </div>
+      </section>
+    </footer>
+    <!-- Preloader -->
+
+    <!-- Preloader -->
+    <!-- Javascript File -->
+    <script src="./scripts/script.js"></script>
+   
+    <!-- Javascript File -->
+  </body>
+</html>
